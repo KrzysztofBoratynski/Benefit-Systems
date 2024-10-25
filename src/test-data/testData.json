@@ -1,0 +1,17 @@
+{
+  "firstScenario": {
+    "itemName": "Sauce Labs Backpack",
+    "itemDescription": "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.",
+    "itemPrice": "$29.99",
+    "tax": "$2.40",
+    "itemTotalPrice": "$29.99",
+    "totalPrice": "$32.39",
+    "paymentInformation": "SauceCard",
+    "shippingInformation": "Free Pony Express Delivery!"
+  },
+  "cartTitle": "Your Cart",
+  "checkoutOverviewTitle": "Checkout: Overview",
+  "completeHeader": "Thank you for your order!",
+  "completeText": "Your order has been dispatched, and will arrive just as fast as the pony can get there!",
+  "checkoutCompleteTitle": "Checkout: Complete!"
+}

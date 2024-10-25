@@ -1,0 +1,29 @@
+{
+  "name": "mybenefit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@faker-js/faker": "^9.0.3",
+    "@playwright/test": "^1.48.1",
+    "@types/node": "^22.7.9",
+    "@typescript-eslint/eslint-plugin": "^8.11.0",
+    "@typescript-eslint/parser": "^8.11.0",
+    "ajv": "^8.17.1",
+    "eslint": "^9.13.0",
+    "eslint-plugin-playwright": "^2.0.0",
+    "globals": "^15.11.0",
+    "prettier": "3.3.3",
+    "typescript-eslint": "^8.11.0"
+  },
+  "dependencies": {
+    "ajv-formats": "^3.0.1",
+    "dotenv": "^16.4.5",
+    "mybenefit": "file:"
+  }
+}

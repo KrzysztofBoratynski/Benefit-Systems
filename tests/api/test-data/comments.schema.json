@@ -1,0 +1,54 @@
+{
+  "$id": "comments",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "postId": {
+        "type": "integer",
+        "default": 1,
+        "examples": [
+          1
+        ]
+      },
+      "id": {
+        "type": "integer",
+        "default": 1,
+        "examples": [
+          1
+        ]
+      },
+      "name": {
+        "type": "string",
+        "default": "id labore ex et quam laborum",
+        "examples": [
+          "id labore ex et quam laborum"
+        ]
+      },
+      "email": {
+        "type": "string",
+        "default": "Eliseo@gardner.biz",
+        "examples": [
+          "Eliseo@gardner.biz"
+        ],
+        "format": "email"
+      },
+      "body": {
+        "type": "string",
+        "default": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
+        "examples": [
+          "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+        ]
+      }
+    },
+    "required": [
+      "postId",
+      "id",
+      "name",
+      "email",
+      "body"
+    ],
+    "additionalProperties": false
+  }
+}
