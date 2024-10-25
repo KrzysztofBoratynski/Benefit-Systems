@@ -8,9 +8,8 @@ import { PageHeaderComponent } from '../pages/components/pageHeader.component';
 import { CustomerInformationPage } from '../pages/customerInformation.page';
 
 type MyFixtures = {
-  loginPage: LoginPage;
-
   webApp: {
+    loginPage: LoginPage;
     productsPage: ProductsPage;
     pageHeaderComponent: PageHeaderComponent;
     cartPage: CartPage;
@@ -21,15 +20,10 @@ type MyFixtures = {
 };
 
 export const test = base.extend<MyFixtures>({
-  loginPage: async ({ page }, use) => {
-    let loginPage: LoginPage;
-    loginPage = new LoginPage(page);
-    await loginPage.goTo(process.env.SAUCE_DEMO_URL as string);
-    await loginPage.login(process.env.USERNAME as string, process.env.PASSWORD as string);
-    await use(loginPage);
-  },
+  
   webApp: async ({ page }, use) => {
     const webApp = {
+      loginPage : new LoginPage(page),
       productsPage: new ProductsPage(page),
       pageHeaderComponent: new PageHeaderComponent(page),
       cartPage: new CartPage(page),
@@ -37,7 +31,8 @@ export const test = base.extend<MyFixtures>({
       chekoutOverviewPage: new CheckoutOverviewPage(page),
       checkoutCompletePage: new CheckoutCompletePage(page),
     };
-
+    await webApp.loginPage.goTo(process.env.SAUCE_DEMO_URL as string);
+    await webApp.loginPage.login(process.env.USERNAME as string, process.env.PASSWORD as string);
     await use(webApp);
   },
 });

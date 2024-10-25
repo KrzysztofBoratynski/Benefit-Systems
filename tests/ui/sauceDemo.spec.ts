@@ -7,7 +7,7 @@ const customerData = generateCustomerData();
 const testData: TestData = JSON.parse(rawdata.toString());
 testData.firstScenario.customerData = customerData;
 
-test('Should succesfully complete product order', async ({ loginPage, webApp }) => {
+test('Should succesfully complete product order', async ({ webApp }) => {
   await test.step('Should check if item is present', async () => {
     await expect(webApp.productsPage.header).toBeVisible();
     expect(await webApp.productsPage.getItemName(testData.firstScenario.itemName)).toBe(
@@ -77,7 +77,7 @@ test('Should succesfully complete product order', async ({ loginPage, webApp }) 
   });
 });
 
-test('Should succesfully remove product from cart', async ({ loginPage, webApp }) => {
+test('Should succesfully remove product from cart', async ({ webApp }) => {
   await test.step('Should check if item is present', async () => {
     await expect(webApp.productsPage.header).toBeVisible();
     expect(await webApp.productsPage.getItemName(testData.firstScenario.itemName)).toBe(
