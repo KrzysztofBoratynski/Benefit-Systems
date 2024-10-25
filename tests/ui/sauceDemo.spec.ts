@@ -1,8 +1,8 @@
-import { generateCustomerData } from '../../src/fixtures/genrateCustomerData.fixture';
-import { test, expect } from '../../src/fixtures/webApp.fixture';
+import { generateCustomerData } from '../../src/ui/fixtures/genrateCustomerData.fixture';
+import { test, expect } from '../../src/ui/fixtures/webApp.fixture';
 import fs from 'fs';
 
-let rawdata = fs.readFileSync('./src/test-data/testData.json');
+let rawdata = fs.readFileSync('./src/ui/test-data/testData.json');
 const customerData = generateCustomerData();
 const testData: TestData = JSON.parse(rawdata.toString());
 testData.firstScenario.customerData = customerData;
